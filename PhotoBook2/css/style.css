@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--font-black);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    object-fit: contain;
+}
+
+:root {
+    --color-bg-white: #FFFFFF;
+    --color-bg-gray: #F5F5F5;
+    --font-black: #333333;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    padding-bottom: 60px;
+}
+
+section,
+footer {
+    width: clamp(335px, 89%, 800px);
+}
+
+section {
+    margin: 20px auto;
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    color: #333;
+}
+
+ol {
+    display: table;
+    margin: 0 auto;
+}
+
+.header-inner,
+.main-visual {
+    margin: 0 auto;
+}
+
+.main-visual {
+    width: clamp(375px, 90%, 1000px);
+    padding-bottom: 40px;
+}
+
+.header-inner {
+    padding-top: 45px;
+    width: clamp(355px, 90%, 1000px);
+}
+
+.logo {
+    width: 180px;
+    padding: 15px 0;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.section-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#index,
+#detail {
+    background: var(--color-bg-gray);
+}
+
+#index .content,
+#detail .content {
+    width: clamp(295px, 90%, 680px);
+}
+
+#index .content {
+    border: 1px solid #333333;
+    padding: 30px;
+}
+
+#index .content li {
+    margin-bottom: 20px;
+}
+
+#index .content li:last-child {
+    margin-bottom: 0;
+}
+
+#gallery .section-inner {
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+.flex-r {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+#detail .content .left {
+    padding-bottom: 40px;
+}
+
+#detail .content .right {
+    padding-top: 40px;
+    border-top: 1px solid #333;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dl {
+    margin-bottom: 17px;
+}
+
+dl:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    margin: 0 auto;
+    padding: 17px 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #detail .content .left {
+        width: 35%;
+        padding-right: 40px;
+    }
+
+    #detail .content .right {
+        width: 65%;
+        padding-left: 40px;
+        border-left: 1px solid #333;
+        border-top: none;
+    }
+
+}
