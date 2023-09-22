@@ -110,7 +110,6 @@ section {
 
 .navbtn span {
     position: absolute;
-    top: 4px;
     width: 30px;
     height: 2px;
     background-color: var(--color-navbtn);
@@ -118,17 +117,21 @@ section {
 
 }
 
+.navbtn span:nth-child(1) {
+    top: 4px;
+}
+
 .navbtn span:nth-child(2) {
     top: 14px;
 }
 
 .navbtn span:nth-child(3) {
-    top: 24px;
+    bottom: 4px;
 }
 
 .navbtn.active span:nth-child(1) {
-    top: 20px;
-    transform: translateY(-6px) rotate(-45deg);
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
     background-color: var(--font-white);
 }
 
@@ -137,8 +140,9 @@ section {
 }
 
 .navbtn.active span:nth-child(3) {
-    top: 20px;
-    transform: translateY(-6px) rotate(45deg);
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    ;
+    transform: translateY(-10px) rotate(315deg);
     background-color: var(--font-white);
 }
 
@@ -249,7 +253,7 @@ section {
     text-align: right;
 }
 
-#contact .section-container .flex-r > div {
+#contact .section-container .flex-r>div {
     width: 100%;
 }
 
@@ -275,7 +279,9 @@ form {
     width: 100%;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     border: 1px solid var(--color-border-contact);
     padding: 10px;
@@ -300,7 +306,7 @@ button {
     margin: 0 auto;
 }
 
-@media screen and (min-width: 1020px){
+@media screen and (min-width: 1020px) {
     .header-inner {
         padding: 20px 40px;
     }
@@ -322,7 +328,7 @@ button {
         justify-content: space-between;
     }
 
-    #contact .section-container .flex-r > div {
+    #contact .section-container .flex-r>div {
         width: 45%;
     }
 
